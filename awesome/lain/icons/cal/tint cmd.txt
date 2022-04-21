@@ -1,0 +1,1 @@
+convert * -fill '#CAA9FA' -colorize 100 *

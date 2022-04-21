@@ -1,0 +1,16 @@
+local naughty = require("naughty")
+local nconf = naughty.config
+nconf.defaults.border_width = 0
+nconf.defaults.margin = 16
+nconf.defaults.shape = helpers.rrect(6)
+nconf.defaults.text = "Boo!"
+nconf.defaults.timeout = 3
+nconf.padding = 8
+nconf.presets.critical.bg = "#FE634E"
+nconf.presets.critical.fg = "#fefefa"
+nconf.presets.low.bg = "#1771F1"
+nconf.presets.normal.bg = "#1771F1"
+nconf.defaults.icon_size = 64
+nconf.spacing = 8
+theme.notification_font = "Inter 12.5"
+
