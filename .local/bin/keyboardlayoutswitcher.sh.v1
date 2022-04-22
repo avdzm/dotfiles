@@ -1,0 +1,29 @@
+#!/usr/bin/bash
+
+numberofparameter=$#                                                # Gets the number of parameter passed
+currentlayout=$(setxkbmap -query | grep layout | awk '{print $2}')  # Gets the current layout
+langLayout=($*)                                                     # Passes the parameters into an array
+
+i=0
+# Checks if the counter has reached at the end of the parameter list
+while [[ "$i" -lt "$(($numberofparameter))" ]]; do
+  if [[ "${langLayout[*]}" =~ "${currentLayout}" ]];then
+    # Checks whether if the current layout is equal to the counter
+    if [ "$currentlayout" == "${langLayout[$i]}" ]; then
+      # Checks if it is NOT the last parameter
+      if [ "$i" -lt "$(($numberofparameter-1))" ]; then
+        # Sets the layout to the next parameter/layout
+        setxkbmap -layout ${langLayout[(($i+1))]} && notify-send --icon /usr/share/icons/Dracula/apps/scalable/key_bindings.svg "Keyboard Layout" "Keyboard set to ${langLayout[(($i+1))]}" || notify-send --icon /usr/share/icons/Dracula/apps/scalable/key_bindings.svg "Keyboard Layout" "Something went wrong :/"
+        break
+      else
+        # The loop has reached to the last parameter, so it selects the first parameter
+        setxkbmap -layout ${langLayout[$1]} && notify-send --icon /usr/share/icons/Dracula/apps/scalable/key_bindings.svg "Keyboard Layout" "Keyboard set to ${langLayout[$1]}" || notify-send --icon /usr/share/icons/Dracula/apps/scalable/key_bindings.svg "Keyboard Layout" "Something went wrong :/"
+        break
+      fi
+    fi
+  else
+    setxkbmap -layout ${langLayout[(($i))]} && notify-send --icon /usr/share/icons/Dracula/apps/scalable/key_bindings.svg "Keyboard Layout" "Keyboard set to ${langLayout[(($i))]}" || notify-send --icon /usr/share/icons/Dracula/apps/scalable/key_bindings.svg "Keyboard Layout" "Something went wrong :/"
+    break
+  fi
+  i=$(($i+1))
+done
