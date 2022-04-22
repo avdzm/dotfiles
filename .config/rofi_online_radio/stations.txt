@@ -1,0 +1,15 @@
+#Station name, URL
+Red FM 00's,https://stream.radiojar.com/red00s
+Red FM 80's,https://stream.radiojar.com/red80s
+Red FM 90's,https://stream.radiojar.com/red90s
+Red FM Live 96.3,http://stream.radiojar.com/redfm963
+Red FM Classic,https://stream.radiojar.com/redclassics 
+Red FM Metal,https://stream.radiojar.com/redmetal 
+Red FM New Music,https://stream.radiojar.com/rednewmusic 
+Rock FM 69.6,http://rockfmlive.mdc.akamaized.net/strmRCFm/userRCFm/playlist.m3u8
+Kiss FM 100.6,https://listen-kissfm1006.sharp-stream.com/kissfm1006hqprem.mp3 
+inKefalonia 103.9,https://stream.radiojar.com/sepgx18vcceuv?
+Derti Web Radio,http://iphone.live24.gr/derty1000
+Mad Radio,http://mediaserver.mad.tv/stream
+Menta FM,https://stream.radiojar.com/menta
+Sfera 102.2,http://sfera.live24.gr/sfera4132
